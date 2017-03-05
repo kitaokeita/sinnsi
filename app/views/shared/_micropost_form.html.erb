@@ -1,0 +1,12 @@
+<%= form_for(@micropost) do |f| %>
+ <%= render 'shared/error_messages', object: f.object %>
+ <div class="field">
+
+  <%= f.date_select  :date %>
+  <label>タイトル</label>
+  <%= f.text_field :title %>
+  <label>日報内容</label>
+  <%= f.text_area :content, placeholder: "keep" %>
+ </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+ <% end %> 
